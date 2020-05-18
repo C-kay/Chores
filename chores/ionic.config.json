@@ -1,0 +1,7 @@
+{
+  "name": "chores",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

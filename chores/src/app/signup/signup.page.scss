@@ -1,0 +1,39 @@
+:host{
+
+    // ion-toolbar{
+    //     --background:transparent;
+    //     --ion-color-base: transparent !important;
+    // }
+
+    .background{
+    
+        --background: url(../../assets/img/chores-login-background.jpg) 0 0/100% 100% no-repeat;
+    
+        background-size: contain;
+        background-position: center;
+
+        align-items: center;
+        
+    }
+
+    .background p{
+        text-align: center;
+    }
+
+    .background div{
+        align-items: center;
+    }
+    
+    
+    ion-card{
+        margin-top: 17%;
+    }
+
+
+    .error{
+        color: red;
+    }
+
+
+
+}

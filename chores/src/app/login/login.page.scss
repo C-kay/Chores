@@ -1,0 +1,50 @@
+:host{
+
+    ion-img{
+        
+        height: 253px;
+        width: auto;
+        display: block;
+    }
+    
+    .background{
+    
+        --background: url(../../assets/img/chores-login-background.jpg) 0 0/100% 100% no-repeat;
+    
+        background-size: contain;
+        background-position: center;
+
+        align-items: center;
+        
+    }
+    
+    .background p{
+        text-align: center;
+    }
+
+    .background div{
+        align-items: center;
+    }
+    
+    
+    ion-card{
+        margin-top: 17%;
+    }
+    
+    #or{
+        margin-top: 0.5%;
+        margin-bottom: 3%;
+    }
+
+    ion-col.signUpCol {
+        text-align: end;
+    }
+
+    .error{
+        color: red;
+    }
+    
+    
+
+    
+}

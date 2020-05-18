@@ -1,0 +1,83 @@
+<ion-header>
+ 
+</ion-header>
+
+<ion-content padding class="background">
+  
+  <div id="logo" center>
+    <ion-img src ="../assets/img/logo.png"></ion-img>
+  </div>
+
+  <ion-card>
+    <ion-card-content>
+
+      <form (ngSubmit) = "signInWithEmail()" [formGroup]="loginForm">
+
+        <ion-list class ="list">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item lines="none" *ngIf= "validEmail()">
+            <div class="error" *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+              Please input your username
+            </div>
+            <div class="error" *ngIf="loginForm.get('email').hasError('minlength') && loginForm.get('email').touched">
+              Minimum 4 characters
+            </div>
+            <div class="error" *ngIf="loginForm.get('email').hasError('maxlength') && loginForm.get('email').touched">
+              Maximum 10 characters
+            </div>
+            <div class="error" *ngIf="loginForm.get('email').hasError('pattern') && loginForm.get('email').touched">
+              Just use alphabet character
+            </div>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password"></ion-input>
+          </ion-item>
+          <ion-item lines="none" *ngIf= "validPassword()">
+            <div class="error" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched" >
+              Please input your password
+            </div>
+            <div class="error" *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched">
+              Minimum 6 characters
+            </div>
+            <div class="error" *ngIf="loginForm.get('password').hasError('maxlength') && loginForm.get('password').touched">
+              Maximum 12 characters
+            </div>
+            <div class="error" *ngIf="loginForm.get('password').hasError('pattern') && loginForm.get('password').touched">
+              Just use alphabet characters
+            </div>
+          </ion-item>
+  
+          
+        </ion-list>
+  
+        <ion-button type= "submit"  [disabled]="!loginForm.valid" color="success" expand="block">Login</ion-button>
+        <p id="or" >______________________________________</p>
+        <ion-button color="danger" expand="block" shape="round" size="small" (click)= "signInWithGoogle()">Login with Google</ion-button>
+        <ion-button [disabled] ="true" color="tertiary" expand="block" shape="round" size="small">Login with Facebook</ion-button>
+  
+
+      </form>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-label (click)="singUp()"color="danger" ><h2>Sign up</h2></ion-label>
+          </ion-col>
+  
+          <ion-col class=signUpCol>
+            <ion-label (click)="forgotPassword()" color ="primary"><h2>Forgot Password</h2></ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+ 
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

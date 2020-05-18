@@ -1,0 +1,23 @@
+#map {
+    width: 100%;
+    height: auto !important;
+    min-height: 100%;
+    position: relative;
+}
+
+ion-grid {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  --ion-grid-column-padding:0px;
+//   --ion-grid--padding:0px;
+  
+}
+
+ion-item {
+    text-align: center;
+}
+
+#bicIcon{
+    font-size: 80 px;
+}

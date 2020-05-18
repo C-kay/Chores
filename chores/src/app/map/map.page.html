@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-y="false">
+  
+  <!-- <ion-fab horizontal="start" vertical="vertical" slot="fixed">
+    <ion-fab-button color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <div #map id="map"></div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="full">
+          <ion-label>{{place}} </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="full">
+          <ion-icon name="location" color="primary"></ion-icon>
+          <ion-label>Place</ion-label>
+          <p>25 mins from you</p>
+        </ion-item>
+      </ion-col>
+
+      <ion-col>
+        <ion-item lines="full" >
+          <ion-icon id="bicIcon" name="bicycle"></ion-icon>
+          <p>Request Rider<p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
