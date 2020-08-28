@@ -14,6 +14,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import {environment} from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -26,6 +27,7 @@ import {environment} from '../environments/environment';
     AngularFireModule.initializeApp(environment.firbase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,

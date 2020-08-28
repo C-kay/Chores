@@ -85,4 +85,8 @@ export class LoginPage implements OnInit {
     return (( this.loginForm.get('password').hasError('pattern') || this.loginForm.get('password').hasError('minlength') || this.loginForm.get('password').hasError('maxlength') || this.loginForm.get('password').hasError('required') )&& this.loginForm.get('password').touched);
   }
 
+  forgotPassword(){
+    
+  }
+
 }
